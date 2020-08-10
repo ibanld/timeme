@@ -24,11 +24,24 @@ export default function Countdown({timer, countdown, breaker, play, setCountdown
 
     }, [countdown, setCountdown, playBreaker, breaker, timer])
 
+    const convert = (time) => {
+        let minutes = Math.floor(time / 60);
+        let seconds = time - ( minutes * 60);
+
+        function str_pad_left(string,pad,length) {
+            return (new Array(length+1).join(pad)+string).slice(-length);
+        }
+        
+        let finalTime = str_pad_left(minutes,'0',2)+':'+str_pad_left(seconds,'0',2);
+
+        return finalTime
+    }
+
 	return( 
         <Grid container justify='center' style={{width: '100%', marginTop: '3vh'}}>
             <Paper id='time-left' elevation={3} style={{width: '50%', textAlign:'center'}}>
                 <Typography variant='h1'>
-                    {countdown}
+                    {convert(countdown)}
                 </Typography>
             </Paper>
         </Grid>

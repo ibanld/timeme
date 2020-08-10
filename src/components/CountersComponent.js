@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, ButtonGroup, Typography, Grid, Paper } from '@material-ui/core'
 import { AddCircleOutline, RemoveCircleOutline } from '@material-ui/icons'
 
-function Counters({play, timer, setTimer, breaker, setBreak }) {
+function Counters({disableBtn, timer, setTimer, breaker, setBreak }) {
 
     const activeTimer = (<ButtonGroup variant="contained" color="primary" aria-label="session-label" style={{marginTop: '1vh'}}>
                             <Button id='session-increment' onClick={ () => setTimer(prevTimer => prevTimer+1) } ><AddCircleOutline /></Button>
@@ -38,7 +38,7 @@ function Counters({play, timer, setTimer, breaker, setBreak }) {
                     <Paper id='session-length' variant='outlined' elevation={3} style={{width: '50%', textAlign:'center'}}>
                         <Typography variant='h4'>{timer}</Typography>
                     </Paper> 
-                            {!play ? activeTimer : disabledButtons}
+                            {!disableBtn ? activeTimer : disabledButtons}
                 </Grid>
             </Grid>
             <Grid item md={5} id='break-label'>
@@ -51,7 +51,7 @@ function Counters({play, timer, setTimer, breaker, setBreak }) {
                     <Paper id="break-length" variant='outlined' elevation={3} style={{width: '50%', textAlign:'center'}}>
                         <Typography variant='h4'>{breaker}</Typography>
                     </Paper>
-                    {!play ? activeBreak : disabledButtons}
+                    {!disableBtn ? activeBreak : disabledButtons}
                 </Grid>
             </Grid>
         </Grid>
