@@ -2,7 +2,7 @@ import React from 'react'
 import { CardActions, Grid, Button } from '@material-ui/core'
 import { PlayCircleFilled, PauseCircleFilled, UpdateRounded } from '@material-ui/icons'
 
-export default function PlayReset({play, handleReset, setPlay}) {
+export default function PlayReset({play, setPlay, handleReset}) {
 
     return (
         <CardActions>
@@ -12,7 +12,7 @@ export default function PlayReset({play, handleReset, setPlay}) {
                         alignItems="baseline"
                     > 
 
-                        <Button id='start_stop' onClick= { ()=> { setPlay(!play) } }>
+                        <Button id='start_stop' onClick= { ()=> { setPlay(!play) } } >
                             {!play ? 
                                 <PlayCircleFilled color='primary'/>
                             :
