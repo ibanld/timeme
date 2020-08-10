@@ -1,9 +1,12 @@
 import React from 'react';
+import { Container } from '@material-ui/core';
+import Navbar from './components/NavbarComponent';
 
 function App() {
 	return (
 		<div className='App'>
-			<h1>Hello World!</h1>
+			<Navbar />
+			<Container fixed>an element</Container>
 		</div>
 	);
 }
