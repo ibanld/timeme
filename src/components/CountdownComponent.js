@@ -38,8 +38,8 @@ export default function Countdown({timer, countdown, breaker, play, setCountdown
     }
 
 	return( 
-        <Grid container justify='center' style={{width: '100%', marginTop: '3vh'}}>
-            <Paper id='time-left' elevation={3} style={{width: '50%', textAlign:'center'}}>
+        <Grid container justify='center' style={{marginTop: '3vh'}}>
+            <Paper id='time-left' elevation={3} style={{width: '100%', textAlign:'center'}}>
                 <Typography variant='h1'>
                     {convert(countdown)}
                 </Typography>
