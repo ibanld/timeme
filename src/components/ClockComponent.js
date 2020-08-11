@@ -21,7 +21,7 @@ export default function Clock() {
     }
 
     useEffect( () => {
-        setCountdown(timer);
+        setCountdown(timer*60);
     }, [timer]);
 
     useEffect( () => {
