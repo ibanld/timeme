@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Countdown from './CountdownComponent'
 import PlayReset from './PlayResetComponent'
 import Counters from './CountersComponent'
-import {Card, CardHeader, CardContent } from '@material-ui/core'
+import {Card, CardContent } from '@material-ui/core'
 
 
 export default function Clock() {
@@ -31,10 +31,6 @@ export default function Clock() {
     return (
         <>
             <Card style={{marginTop: '3vh'}}>
-                <CardHeader
-                title= 'Don`t waste your time!'
-                style={{textAlign: 'center'}}
-                />
                 <CardContent>
                     <Counters disableBtn = {disableBtn} timer={timer} setTimer={setTimer} breaker={breaker} setBreak={setBreak} />
                     <Countdown timer = {timer} countdown={countdown} breaker={breaker} play={play} setCountdown={setCountdown} />
