@@ -1,5 +1,3 @@
-react, react hooks, material ui, usesound hook, freecodecamp
-
 # ⏲️ Time Me!
 ### Pomodoro Clock built with React.
 
